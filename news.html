@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <style>
+        @keyframes migotanie {
+            0% {
+                background-color: transparent;
+                /* Początkowy stan - przezroczystość */
+            }
+
+            50% {
+                background-color: white;
+                /* Środkowy stan - kolor biały */
+            }
+
+            100% {
+                background-color: transparent;
+                /* Końcowy stan - z powrotem do przezroczystości */
+            }
+        }
+
+        .migajacy-element {
+            display: inline-block;
+            padding: 5px;
+            animation: migotanie 1s infinite;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serwis IT - Nowości</title>
+    <link rel="stylesheet" href="styles.css">
+     <!-- Dodanie Bootstrap -->
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- Ikona hamburgera -->
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="news.html">Nowości</a></li>
+                <li><a href="tutorials.html">Poradniki</a></li>
+                <li><a href="price.html">Cennik</a></li>
+                <li><a href="game.html">Gra</a></li>
+                <li><a href="user-panel.html">Panel użytkownika</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Nowości</h1>
+            <article>
+                <h2>Nowe wydanie systemu operacyjnego Windows</h2>
+                <p>System operacyjny wprowadza wiele nowych funkcji, które poprawią wydajność i bezpieczeństwo.</p>
+            </article>
+            <article>
+                <h2>Uwaga Konkurs!</h2>
+                <p>Akcja wymiany starą grafikę na nową. Aby wygrać musisz napisać dlaczego mielibyśmy wybrać ciebie.
+                    Termin wysłania do końca czerwca.
+
+                </p>
+            </article>
+        </section>
+    </main>
+    <div id="kontener"></div>
+
+    <script>
+        // Tworzenie migających elementów za pomocą pętli
+        function stworzMigajaceElementy() {
+            const kontener = document.getElementById('kontener');
+
+            for (let i = 1; i <= 1; i++) {// Pętla for tworzy 1 migający element
+                const div = document.createElement('div');// Tworzenie nowego elementu <div> dla każdej iteracji
+                div.textContent = `Witamy z tej strony`; // Ustawienie tekstowego zawartości dla każdego nowego <div>
+                div.classList.add('migajacy-element');// Dodanie klasy 'migajacy-element' do każdego nowego <div>
+                kontener.appendChild(div); // Dodanie nowego <div> do elementu kontenera
+            }
+            for (let i = 1; i <= 1; i++) {
+                const div = document.createElement('div');
+                div.textContent = `Serwis`;
+                div.classList.add('migajacy-element');
+                kontener.appendChild(div);
+            }
+
+            for (let i = 1; i <= 1; i++) {
+                const div = document.createElement('div');
+                div.textContent = `it`;
+                div.classList.add('migajacy-element');
+                kontener.appendChild(div);
+            }
+            for (let i = 1; i <= 1; i++) {
+                const div = document.createElement('div');
+                div.textContent = `Zaprszaszmy`;
+                div.classList.add('migajacy-element');
+                kontener.appendChild(div);
+            }
+            for (let i = 1; i <= 1; i++) {
+                const div = document.createElement('div');
+                div.textContent = `odwiedzić cennik!`;
+                div.classList.add('migajacy-element');
+                kontener.appendChild(div);
+            }
+        }
+
+        stworzMigajaceElementy();
+    </script>
+    <footer>
+        <p>&copy; 2024 Serwis IT By Mateusz Hauska</p>
+    </footer>
+     <!-- Vue.js CDN -->
+     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+     <!-- Bootstrap JS (opcjonalnie) -->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

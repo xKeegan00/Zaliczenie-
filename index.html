@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serwis IT - Strona Główna</title>
+    <link rel="stylesheet" href="styles.css">
+     <!-- Dodanie Bootstrap -->
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- Ikona hamburgera -->
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="news.html">Nowości</a></li>
+                <li><a href="tutorials.html">Poradniki</a></li>
+                <li><a href="price.html">Cennik</a></li>
+                <li><a href="game.html">Gra</a></li>
+                <li><a href="user-panel.html">Panel użytkownika</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="app">
+        <section>
+            <h1>{{ title }}</h1>
+            <strong><p>{{ welcomeMessage }}</p></strong>
+        </section>
+        <section>
+            <h2>{{ aboutTitle }}</h2>
+           <strong><p>{{ aboutMessage }}</p></strong>
+        </section>
+        <section>
+            <h2>{{ servicesTitle }}</h2>
+            <ul>
+                <li v-for="service in services">{{ service }}</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Serwis IT By Mateusz Hauska</p>
+    </footer>
+         <!-- Vue.js CDN -->
+         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+         <!-- Bootstrap JS (opcjonalnie) -->
+         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        
+        
+        new Vue({
+            el: '#app',
+            data: {
+                title: 'Witaj na portalu serwisu IT!',
+                welcomeMessage: 'Serdecznie zapraszamy do skorzystania z usług naszego serwisu komputerowego! Jesteśmy zespołem doświadczonych specjalistów, gotowych rozwiązać wszelkie problemy związane z Państwa sprzętem komputerowym.',
+                aboutTitle: 'O nas',
+                aboutMessage: 'Jesteśmy zespołem pasjonatów IT, którzy chcą dzielić się swoją wiedzą i doświadczeniem z innymi. Nasza strona ma na celu dostarczanie wartościowych treści oraz tworzenie społeczności osób zainteresowanych technologiami.',
+                servicesTitle: 'Nasze usługi',
+                services: [
+                    'Profesjonalizm',
+                    'Szybkość działania',
+                    'Gwarancja satysfakcji',
+                    'Konsultacje i doradztwo',
+                    'Pogotowie komputerowe'
+                ]
+            }
+        });
+    </script>
+</body>
+</html>

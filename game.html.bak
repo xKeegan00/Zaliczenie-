@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal IT - Gra</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="ikona-menu" id="ikona-menu">
+                &#9776; <!-- Ikona hamburgera -->
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="news.html">Nowości</a></li>
+                <li><a href="tutorials.html">Poradniki</a></li>
+                <li><a href="price.html">Cennik</a></li>
+                <li><a href="game.html">Gra</a></li>
+                <li><a href="user-panel.html">Panel użytkownika</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Gra IT - Łap Ikony!</h1>
+            <button style="padding:5px; margin:5px; text-align: center; border-radius:50%;"
+                id="przycisk-start">Start</button>
+            <div id="kontener-gry">
+                <div id="koszyk"></div>
+            </div>
+            <p id="wynik">Wynik: 0</p>
+            <p id="timer">Pozostały czas: 1:00</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Serwis IT By Mateusz Hauska</p>
+    </footer>
+    <script src="game.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

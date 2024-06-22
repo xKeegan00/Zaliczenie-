@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Użytkownika - Serwis IT</title>
+    <link rel="stylesheet" href="styles.css">
+     <!-- Dodanie Bootstrap -->
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- Ikona hamburgera -->
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="news.html">Nowości</a></li>
+                <li><a href="tutorials.html">Poradniki</a></li>
+                <li><a href="price.html">Cennik</a></li>
+                <li><a href="game.html">Gra</a></li>
+                <li><a href="user-panel.html">Panel Użytkownika</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Panel Użytkownika</h1>
+            <form id="user-form">
+                <label for="username">Nazwa użytkownika:</label>
+                <input type="text" id="username" name="username">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <br>
+                <label for="password">Hasło:</label>
+                <input type="password" id="password" name="password">
+                <br>
+                <button style="padding:5px; margin:5px;" type="submit">Zapisz</button>
+            </form>
+            <div id="user-info"></div>
+        </section>
+    </main>
+    <footer>
+         <!-- Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- Bootstrap JS (opcjonalnie) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <p>&copy; 2024 Serwis IT By Mateusz Hauska</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

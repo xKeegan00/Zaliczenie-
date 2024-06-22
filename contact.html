@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serwis IT - Kontakt</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Dodanie Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <nav class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="menu-icon" id="menu-icon">
+                    &#9776; <!-- Ikona hamburgera -->
+                </div>
+                <ul class="menu list-unstyled d-flex mb-0" id="menu">
+                    <li class="mr-3"><a href="index.html" class="text-white">Strona Główna</a></li>
+                    <li class="mr-3"><a href="news.html" class="text-white">Nowości</a></li>
+                    <li class="mr-3"><a href="tutorials.html" class="text-white">Poradniki</a></li>
+                    <li class="mr-3"><a href="price.html" class="text-white">Cennik</a></li>
+                    <li class="mr-3"><a href="game.html" class="text-white">Gra</a></li>
+                    <li class="mr-3"><a href="user-panel.html" class="text-white">Panel użytkownika</a></li>
+                    <li class="mr-3"><a href="contact.html" class="text-white">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="contactApp" class="container mt-4">
+        <div class="container">
+            <div class="row">
+                <div id="kontakty" class="col-md-6 mb-4">
+                    <h1 class="text-center">Kontakt</h1>
+                    <article>
+                        <h2 class="text-center">Skontaktuj się z nami</h2>
+                        <p>{{ contactMessage }}</p>
+
+                        <h3 class="text-center">Godziny otwarcia</h3>
+                        <ul class="list-unstyled">
+                            <li v-for="hour in openingHours">{{ hour }}</li>
+                        </ul>
+
+                        <h3 class="text-center">Nasze dane kontaktowe</h3>
+                        <p>Adres: {{ address }}</p>
+                        <p>Telefon: {{ phone }}</p>
+                        <p>E-mail: {{ email }}</p>
+                    </article>
+                </div>
+                <div id="map" class="col-md-6 mb-4">
+                    <h3 class="text-center">Mapa dojazdu</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2440.008742901505!2d21.029459677160183!3d52.29769577200372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecda86ea825cf%3A0xecf26828c287006f!2sUniwersytet%20WSB%20Merito%20Warszawa!5e0!3m2!1spl!2spl!4v1718732070997!5m2!1spl!2spl"
+                        class="groove w-100" height="450"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Serwis IT By Mateusz Hauska</p>
+    </footer>
+    <!-- Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- Bootstrap JS (opcjonalnie) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        new Vue({
+            el: '#contactApp',
+            data: {
+                contactMessage: 'Jeśli masz pytania lub potrzebujesz pomocy, jesteśmy tu, aby Ci pomóc! Możesz skontaktować się z nami telefonicznie, przez e-mail lub odwiedzić nas osobiście.',
+                openingHours: [
+                    'Poniedziałek - Piątek: 9:00 - 18:00',
+                    'Sobota: 10:00 - 14:00',
+                    'Niedziela: Zamknięte'
+                ],
+                address: 'ul. Łabiszyńska 25, 03-204 Warszawa',
+                phone: '123-456-789',
+                email: 'kontakt@serwisByMateusz.pl'
+            }
+        });
+    </script>
+</body>
+
+</html>
